@@ -20,7 +20,9 @@ modules:
       - rm starc-setup.AppImage
       - cp squashfs-root/starc.desktop                                      ${FLATPAK_ID}.desktop
       - cp squashfs-root/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png ${FLATPAK_ID}.png
-      - desktop-file-edit --set-icon ${FLATPAK_ID} --set-key Exec --set-value 'starc-run %u' ${FLATPAK_ID}.desktop
+      - cp squashfs-root/share/metainfo/${FLATPAK_ID}.metainfo.xml          ${FLATPAK_ID}.metainfo.xml
+      - desktop-file-edit --set-icon ${FLATPAK_ID} --set-key Exec --set-value 'starc-run %u'
+        ${FLATPAK_ID}.desktop
       - install -Dm644 ${FLATPAK_ID}.desktop      -t ${FLATPAK_DEST}/share/applications
       - install -Dm644 ${FLATPAK_ID}.png          -t ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
@@ -32,11 +34,9 @@ modules:
         commands:
           - /app/bin/starc/starc $@
       - type: file
-        path: dev.storyapps.starc.metainfo.xml
-      - type: file
         filename: starc-setup.AppImage
-        url: https://github.com/story-apps/starc/releases/download/v0.3.1/starc-setup.AppImage
-        sha256: fc58021dfa77d939c173b58b449e2687b26e47a9fb90f785561c5c46ba1d4353
+        url: https://github.com/story-apps/starc/releases/download/v0.3.2/starc-setup.AppImage
+        sha256: 7869709b64243229a87f19c34061cf2a5508c6416499ad9451631fbb8746ad3f
         x-checker-data:
           type: json
           url: https://api.github.com/repos/story-apps/starc/releases/latest

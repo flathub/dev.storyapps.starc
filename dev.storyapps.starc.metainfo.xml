@@ -70,6 +70,7 @@
         </screenshot>
     </screenshots>
     <releases>
+        <release version="v0.3.2" date="2022-11-15"/>
         <release version="0.3.1" date="2022-10-31"/>
         <release version="0.3.0" date="2022-10-15"/>
     </releases>

@@ -6,6 +6,7 @@ command: starc-run
 separate-locales: false
 finish-args:
   - --socket=x11
+  - --socket=wayland
   - --share=ipc
   - --filesystem=xdg-documents:rw
   # Needs sound to play optional typewriter sounds

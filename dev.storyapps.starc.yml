@@ -12,6 +12,8 @@ finish-args:
   # Needs sound to play optional typewriter sounds
   - --socket=pulseaudio
   - --share=network
+  - --device=dri
+  - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
 modules:
   - name: starc
     buildsystem: simple

@@ -24,11 +24,13 @@ modules:
       - cp squashfs-root/starc.desktop                                      ${FLATPAK_ID}.desktop
       - cp squashfs-root/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png ${FLATPAK_ID}.png
       - cp squashfs-root/share/metainfo/${FLATPAK_ID}.metainfo.xml          ${FLATPAK_ID}.metainfo.xml
+      - cp squashfs-root/share/mime/packages/${FLATPAK_ID}.mime.xml         ${FLATPAK_ID}.mime.xml
       - desktop-file-edit --set-icon ${FLATPAK_ID} --set-key Exec --set-value 'starc-run
         %u' ${FLATPAK_ID}.desktop
       - install -Dm644 ${FLATPAK_ID}.desktop      -t ${FLATPAK_DEST}/share/applications
       - install -Dm644 ${FLATPAK_ID}.png          -t ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
+      - install -Dm644 ${FLATPAK_ID}.mime.xml     -t ${FLATPAK_DEST}/share/mime/packages
       - install -Dm755 starc-run                  -t ${FLATPAK_DEST}/bin
       - mv squashfs-root ${FLATPAK_DEST}/bin/starc
     sources:

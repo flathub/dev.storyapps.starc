@@ -8,7 +8,8 @@ finish-args:
   - --socket=x11
   - --socket=wayland
   - --share=ipc
-  - --filesystem=xdg-documents:rw
+  - --filesystem=home
+  - --filesystem=/tmp
   # Needs sound to play optional typewriter sounds
   - --socket=pulseaudio
   - --share=network

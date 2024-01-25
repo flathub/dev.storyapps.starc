@@ -10,6 +10,9 @@ finish-args:
   - --share=ipc
   - --filesystem=home
   - --filesystem=/tmp
+  - --filesystem=/mnt
+  - --filesystem=/media
+  - --filesystem=/run/media
   # Needs sound to play optional typewriter sounds
   - --socket=pulseaudio
   - --share=network

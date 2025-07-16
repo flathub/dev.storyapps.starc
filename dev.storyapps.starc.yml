@@ -43,7 +43,7 @@ modules:
         commands:
           - /app/bin/starc/starc $@
       - type: file
-        filename: starc-setup.AppImage
+        dest-filename: starc-setup.AppImage
         url: https://github.com/story-apps/starc/releases/download/v0.7.8/starc-setup.AppImage
         sha256: b615bb0736d8d1e47bdac6b47904fc893a3e2b5f779360b96fe474cf25e78bd6
         x-checker-data:

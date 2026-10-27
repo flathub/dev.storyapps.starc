@@ -44,8 +44,8 @@ modules:
           - /app/bin/starc/starc $@
       - type: file
         dest-filename: starc-setup.AppImage
-        url: https://github.com/story-apps/starc/releases/download/v0.8.3/starc-setup.AppImage
-        sha256: 64d77af44ef4c9314e40604066e389a8a973192fb4c52b003f6ba1d4459be81f
+        url: https://github.com/story-apps/starc/releases/download/v0.8.4/starc-setup.AppImage
+        sha256: ad1f5173353e1efc03ef095dd7dfced0a4755da5a9132359401c2ccf8d9fd6c9
         x-checker-data:
           type: json
           url: https://api.github.com/repos/story-apps/starc/releases/latest
